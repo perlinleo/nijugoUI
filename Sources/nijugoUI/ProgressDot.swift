@@ -37,6 +37,12 @@ public struct ProgressDot: View {
     
     @State private var pulse: Bool = false
     
+    public init(progress: CGFloat, size: Size = .L, phase: Phase = .passed) {
+        self.progress = progress
+        self.size = size
+        self.phase = phase
+    }
+    
     public var body: some View {
         Circle()
             .fill(
